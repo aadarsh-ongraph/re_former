@@ -1,0 +1,10 @@
+<h1> Fill the users Details </h1>
+
+<%= form_tag('/user/create', :method => "post") do %>
+
+ <div> Username <%= text_field_tag(:username)%> </div>
+ <div> Email <%= email_field_tag(:email)%>   </div>
+ <div> Password <%= password_field_tag(:password)%> </div>
+
+ <%= submit_tag("create user")%>
+<% end %>
