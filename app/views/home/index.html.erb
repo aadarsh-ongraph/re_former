@@ -1,0 +1,8 @@
+
+<h1>Welcome to MyApp!</h1>
+<% if user_signed_in? %>
+  <p>Hello, <%= current_user.username %></p>
+  <%= link_to 'Logout', logout_path, data: {"turbo-method": :delete} %>
+<% else %>
+  <%= link_to 'Login', login_path %>
+<% end %>
